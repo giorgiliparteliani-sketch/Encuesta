@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Formulari de registre</h1>
+        <p class="introduccio">
+            Omple el formulari per registrar-te a l'activitat.
+        </p>
+        <form action="https://m0373ac3.free.nf/processa.php" method="get">
+            <fieldset>
+                <legend>Dades personals</legend>
+                <label for="nom">Nom</label>
+                <input type="text" required id="nom" name="nom">
+                <label for="cognoms">Cognoms</label>
+                <input type="text" id="cognoms" name="cognoms">
+                <label for="correu_electronic">Correu Electrònic</label>
+                <input type="email" id="correu_electronic" name="correu_electronic">
+                <label for="contrasenya">Contrasenya</label>
+                <input type="password" id="contrasenya" name="contrasenya">
+                <label for="edat">Edat</label>
+                <input type="number" min="14" max="100" id="edat" name="edat">
+                <label for="data_de_naixament">Data de naixament</label>
+                <input type="date" id="data_de_naixament" name="data_de_naixament">
+                <label for="telefon">Telèfon</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="677102211">
+                <label for="Pàgina web">Pàgina web</label>
+                <input type="url" id="Pàgina web" name="Pàgina web" placeholder="https://exemple.com">
+            </fieldset>
+            <fieldset>
+                <legend>Preferències</legend>
+                <label for="Color preferit">Color preferit</label>
+                <input type="color" value="#0d6efd" id="Color preferit" name="Color preferit">
+                <label for="Quant t'agrada programar?">Quant t'agrada programar?</label>
+                <p>
+                    Selecciona un valor entre 0 i 10.
+                </p>
+                <input type="range" value="5" max="10" min="0" id="Quant t'agrada programar?"
+                    name="Quant t'agrada programar?">
+                <label>Gènere:</label>
+                <label for="Home">Home</label>
+                <input type="radio" id="Home" name="Gènere">
+                <label for="Dona">Dona</label>
+                <input type="radio" id="Dona" name="Gènere">
+                <label for="Altre">Altre</label>
+                <input type="radio" id="Altre" name="Gènere">
+                <label>Aficions:</label>
+                <label for="Programació">Programació</label>
+                <input type="checkbox" id="Programació" name="Aficions">
+                <label for="Videojocs">Videojocs</label>
+                <input type="checkbox" id="Videojocs" name="Aficions">
+                <label for="Esport">Esport</label>
+                <input type="checkbox" id="Esport" name="Aficions">
+                <label for="Música">Música</label>
+                <input type="checkbox" id="Música" name="Aficions">
+            </fieldset>
+            <fieldset>
+                <legend>Localització</legend>
+                <label for="País">País:</label>
+                <select name="País" id="País">
+                    <option value="--Selecciona un país--">--Selecciona un país--</option>
+                    <option value="Espanya">Espanya</option>
+                    <option value="França">França</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                </select>
+                <label for="municipis">Municipi:</label>
+                <p>Pots escriure un municipi o seleccionar-ne un de la llista</p>
+                <input list="municipis" type="text" name="municipi">
+                <datalist id="municipis">
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Girona">Girona</option>
+                    <option value="Lleida">Lleida</option>
+                    <option value="Tarragona">Tarragona</option>
+                    <option value="Badalona">Badalona</option>
+                    <option value="Sabadell">Sabadell</option>
+                    <option value="Terrassa">Terrassa</option>
+                    <option value="Mataró">Mataró</option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Informació addicional</legend>
+                <label for="Comentaris">Comentaris</label>
+                <textarea name="Comentaris" id="Comentaris" placeholder="Escriu aquí els teus comentaris...">
+                </textarea>
+                <label for="Adjunta un fitxer">Adjunta un fitxer:</label>
+                <input type="file" name="fitxer">
+                <p>Selecciona un fitxer del teu ordinador</p>
+                <input type="checkbox" id="Accepto les condicions de la inscripció." name="Accepto les condicions de la inscripció." required>
+                <label for="Accepto les condicions de la inscripció.">Accepto les condicions de la inscripció.</label>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Natejar">
+        </form>
+    </main>
+</body>
+</html>
